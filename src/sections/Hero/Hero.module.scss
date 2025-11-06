@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.hero {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  min-height: 90vh;
+  padding-top: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  span {
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  max-width: 520px; /* biraz daha büyük */
+  height: auto;
+  border-radius: 20px; /* köşeleri yumuşat */
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* hafif derinlik efekti */
+  opacity: 0.95; /* rengi biraz silikleştirir */
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02); /* hover’da hafif büyüsün */
+    opacity: 1; /* parlaklaşsın */
+  }
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    border-radius: 12px;
+  }
+}
