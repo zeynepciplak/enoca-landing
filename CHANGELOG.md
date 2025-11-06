@@ -1,4 +1,9 @@
 # 📘 CHANGELOG
+## [0.1.0] - 2025-11-06
+### Added
+- Features Section eklendi.
+- 3 adet Card bileşeni responsive grid içerisinde konumlandırıldı.
+- SCSS kırılımları ve küçük hover iyileştirmeleri yapıldı.
 
 ## [0.0.9] - 2025-11-06  
 ### Added  

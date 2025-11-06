@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.features {
+  padding: 5rem 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  @include container; 
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+   align-items: stretch;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.grid :global(.card) {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.grid :global(.card:hover) {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
