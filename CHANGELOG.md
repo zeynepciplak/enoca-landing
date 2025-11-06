@@ -1,5 +1,10 @@
 # 📘 CHANGELOG
 
+## [0.3.0] - 2025-11-06
+### Added
+- FAQ (Sıkça Sorulan Sorular) bölümü eklendi.
+- Accordion bileşeni kullanılarak klavye erişimi, aria-etiketleri ve responsive yapı sağlandı.
+
 ## [0.2.0] - 2025-11-06
 ### Added
 - Pricing (Fiyat Kartları) bölümü eklendi.
