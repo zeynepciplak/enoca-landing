@@ -1,62 +1,63 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.item {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.item {
-  border-radius: var(--border-radius);
-  border: 1px solid #ddd;
-  background-color: var(--secondary-color);
-  overflow: hidden;
-  @include transition(all);
-
-  &.active {
-    border-color: var(--primary-color);
-  }
+.item:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .header {
   width: 100%;
-  background: none;
+  text-align: left;
+  background: transparent;
   border: none;
+  outline: none;
   padding: 1rem 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: left;
   cursor: pointer;
-  color: var(--text-color);
-  font-size: 1rem;
-  @include transition(color);
+  transition: background 0.3s ease;
 
-  &:hover {
-    color: var(--primary-color);
+  &:hover,
+  &:focus-visible {
+    background: var(--card-bg-hover);
   }
 }
 
 .icon {
   font-size: 1.25rem;
+  line-height: 1;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
 .content {
-  padding: 0 1.25rem 1rem;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  color: var(--text-color);
-  animation: fade 0.2s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 1.25rem;
 
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  p {
+    margin: 0;
+    padding-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
   }
+}
+
+.active .content {
+  max-height: 200px; 
+  opacity: 1;
 }
