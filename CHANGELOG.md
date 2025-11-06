@@ -1,5 +1,14 @@
 # 📘 CHANGELOG
 
+## [0.1.0] - 2025-11-07  
+### Added  
+- Form doğrulama sistemi geliştirildi.  
+  - Ad Soyad, E-posta ve Mesaj alanlarında boş alan kontrolü eklendi.  
+  - E-posta formatı geçersiz olduğunda uyarı veriyor.  
+  - Başarılı gönderimde “ Mesajınız başarıyla gönderildi” bildirimi çıkıyor.  
+- Boş uyarı ve başarı mesajı alanları `:empty` seçici ile gizlendi.  
+- Input bileşeni `id` ve `name` prop’larını DOM’a aktarıyor.  
+
 ## [0.3.0] - 2025-11-06
 ### Added
 - FAQ (Sıkça Sorulan Sorular) bölümü eklendi.
