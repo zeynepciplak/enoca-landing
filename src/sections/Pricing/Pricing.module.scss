@@ -65,7 +65,10 @@
   flex-direction: column;
   padding: 2rem 1.75rem 2.25rem;
   outline: none;
-  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 
   &:hover,
   &:focus-visible {

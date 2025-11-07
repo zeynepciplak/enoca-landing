@@ -1,6 +1,12 @@
 import styles from './Accordion.module.scss';
 
-export default function Accordion({ question, answer, isActive, onToggle, index }) {
+export default function Accordion({
+  question,
+  answer,
+  isActive,
+  onToggle,
+  index,
+}) {
   const buttonId = `accordion-${index}`;
   const panelId = `panel-${index}`;
 

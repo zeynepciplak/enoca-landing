@@ -22,7 +22,11 @@ export default function Modal({ isOpen, onClose, title, children }) {
       >
         {title && <h2 className={styles.title}>{title}</h2>}
         <div className={styles.content}>{children}</div>
-        <button className={styles.closeBtn} onClick={onClose} aria-label="Kapat">
+        <button
+          className={styles.closeBtn}
+          onClick={onClose}
+          aria-label="Kapat"
+        >
           ✕
         </button>
       </div>
