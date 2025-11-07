@@ -24,11 +24,14 @@ export default function Hero() {
 
       <div className={styles.imageWrapper}>
         <img
-          src="/images/hero-images.png"
+          src="/images/hero-images.webp"
           alt="Hero görseli"
           className={styles.image}
+           loading="lazy"
+           
         />
       </div>
     </section>
   );
 }
+ 

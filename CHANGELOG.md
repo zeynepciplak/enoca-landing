@@ -1,5 +1,12 @@
 # 📘 CHANGELOG
 
+## [v1.0.7] - 2025-11-07
+###  Performance
+- Tüm görseller `.webp` formatına dönüştürüldü.
+- `Hero`, `Features` ve `Pricing` bölümlerinde `lazy-load` eklendi.
+- Görsel geçişleri ve yüklenme süresi optimize edildi.
+
+
 ## [0.5.0] - 2025-11-07
 ### Added
 - Dark/Light tema geçişi için `ThemeSwitcher` bileşeni eklendi.
