@@ -1,12 +1,20 @@
 # 📘 CHANGELOG
 
-## [0.1.0] - 2025-11-07
-### Added
+## [0.8.0] - 2025-11-07  
+###  Performance
+- CLS azaltmak için `width` ve `height` attribute’ları eklendi  
+- `vite.config.js` optimizasyonları (minify, cssCodeSplit, manualChunks) uygulandı  
+- Script etiketleri `defer` olarak düzenlendi  
+- Lighthouse **Performans skoru: 100/100 **
+
+
+## [0.7.0] - 2025-11-07
+### Refactor
 - Aria-label ve role iyileştirmeleriyle erişilebilirlik artırıldı.
 - Başlık ve alt başlık font boyutları standardize edildi.
 - Lazy load optimizasyonu eklendi.
 
-## [v1.0.7] - 2025-11-07
+## [0.6.0] - 2025-11-07
 ###  Performance
 - Tüm görseller `.webp` formatına dönüştürüldü.
 - `Hero`, `Features` ve `Pricing` bölümlerinde `lazy-load` eklendi.
