@@ -1,11 +1,11 @@
 import styles from './Card.module.scss';
 
-export default function Card({ title, description, image, children, loading = 'lazy' }) {
+export default function Card({ title, description, image, children }) {
   return (
     <div className={styles.card}>
       {image && (
         <div className={styles.imageWrapper}>
-          <img src={image} alt={title || 'card image'} className={styles.image}  loading={loading} 
+          <img src={image} alt={title || 'card image'} className={styles.image}  loading="lazy"
             />
         </div>
       )}

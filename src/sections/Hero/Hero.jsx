@@ -27,7 +27,9 @@ export default function Hero() {
           src="/images/hero-images.webp"
           alt="Hero görseli"
           className={styles.image}
-           loading="lazy"
+          loading="lazy"
+          width="600"
+          height="400"
            
         />
       </div>
