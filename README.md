@@ -157,6 +157,16 @@ git push origin feat/new-feature
 
 ----
 
+
+Projenin canlı haline aşağıdaki bağlantıdan ulaşabilirsiniz:
+
+🔗 Enoca Landing - Live Demo-> [enoca-landing.vercel.app](https://enoca-landing.vercel.app/)
+
+Bu sürüm, dev branch’inden alınan son build’tir.
+Performans optimizasyonları, Lighthouse skorları (100/100) ve SCSS mimarisiyle birlikte en güncel sürüm yayınlanmıştır.
+
+---
+
 ## İletişim
 
 Geliştirici: Zeynep Cıplak
