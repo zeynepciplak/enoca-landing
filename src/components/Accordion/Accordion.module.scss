@@ -4,7 +4,7 @@
 .item {
   background: var(--card-bg);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -31,7 +31,9 @@
 
   &:hover,
   &:focus-visible {
-    background: var(--card-bg-hover);
+    background: var(--secondary-color);
+    outline: 1px solid var(--primary-color);
+    outline-offset: 1px;
   }
 }
 
@@ -58,6 +60,6 @@
 }
 
 .active .content {
-  max-height: 200px; 
+  max-height: 200px;
   opacity: 1;
 }
