@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.item {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.header {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--secondary-color);
+    outline: 1px solid var(--primary-color);
+    outline-offset: 1px;
+  }
+}
+
+.icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 1.25rem;
+
+  p {
+    margin: 0;
+    padding-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+}
+
+.active .content {
+  max-height: 200px;
+  opacity: 1;
+}

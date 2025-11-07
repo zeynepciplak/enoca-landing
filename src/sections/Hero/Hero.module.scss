@@ -1,0 +1,89 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/typography';
+
+.hero {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  min-height: 90vh;
+  padding-top: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* 🎯 Yeni büyük boyutlar */
+.title {
+  font-size: calc(var(--font-size-title) * 1.3); /* ~33px */
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+
+  span {
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    font-size: calc(var(--font-size-title) * 1.05);
+  }
+}
+
+.subtitle {
+  font-size: var(--font-size-subtitle);
+  line-height: 1.75;
+  opacity: 0.9;
+  color: var(--text-color);
+
+  @media (max-width: 768px) {
+    font-size: calc(var(--font-size-subtitle) * 0.95);
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  max-width: 650px; /* biraz büyüdü */
+  height: auto;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0.99;
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+
+  &:hover {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 92%;
+  }
+}

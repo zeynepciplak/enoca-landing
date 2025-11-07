@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.required {
+  color: #e63946;
+  margin-left: 0.25rem;
+}
+.input {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  @include transition(border);
+
+  &:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+}
+.errorInput {
+  border-color: #e63946;
+}
+
+.errorMessage {
+  color: #e63946;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}

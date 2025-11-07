@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/typography';
+
+.faq {
+  padding: 6rem 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  @include container;
+  text-align: center;
+}
+
+.title {
+  font-size: calc(var(--font-size-title) * 1.3); /* ~33px */
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+
+  @media (max-width: 768px) {
+    font-size: calc(var(--font-size-title) * 1.1);
+  }
+}
+
+.subtitle {
+  font-size: calc(var(--font-size-subtitle) * 1.05); /* ~18px */
+  line-height: 1.7;
+  opacity: 0.9;
+  max-width: 720px;
+  margin: 0 auto 3rem auto;
+  color: var(--text-color);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+
+body {
+  transition: background var(--transition);
+}
+
+/* Örnek global sınıf */
+.container {
+  @include container;
+}

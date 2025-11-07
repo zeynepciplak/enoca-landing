@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button {
+  @include flex-center;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--border-radius);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  @include transition(background);
+
+  &.primary {
+    background: var(--primary-color);
+    color: #fff;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &.secondary {
+    background: var(--secondary-color);
+    color: var(--text-color);
+  }
+}
