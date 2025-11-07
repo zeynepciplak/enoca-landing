@@ -1,3 +1,4 @@
+import Contact from "./sections/Contact/Contact";
 import FAQ from "./sections/FAQ/FAQ";
 import Features from "./sections/Features/Features";
 import Hero from "./sections/Hero/Hero";
@@ -11,6 +12,7 @@ function App() {
     <Features/>
     <Pricing/>
     <FAQ/>
+    <Contact/>
     </>
   );
 }
