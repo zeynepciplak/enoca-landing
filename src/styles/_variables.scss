@@ -8,6 +8,8 @@
   --border-radius: 8px;
   --border-color: #e0e0e0;
   --transition: 0.3s ease;
+  --image-max-width: 100%;
+  --image-transition: transform 0.3s ease-in-out;
 }
 
 [data-theme='dark'] {

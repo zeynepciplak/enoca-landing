@@ -7,19 +7,20 @@ export default function Features() {
       title: 'Hızlı ve Modern',
       description:
         'Vite + React mimarisiyle geliştirildi. Asset optimizasyonu ve hızlı HMR ile yüksek performans.',
-      image: '/images/feature1.png',
+      image: '/images/feature1.webp',
+      
     },
     {
       title: 'Tamamen Responsive',
       description:
         'Mobil-öncelikli grid ve flex yapılarıyla 320–1440px arası tüm boyutlarda tutarlı görünüm.',
-      image: '/images/feature2.png',
+      image: '/images/feature2.webp',
     },
     {
       title: 'Kolay Özelleştirilebilir',
       description:
         'SCSS değişkenleri, mixin’ler ve component props ile temalandırma ve yeniden kullanım çok kolay.',
-      image: '/images/feature3.png',
+      image: '/images/feature3.webp',
     },
   ];
 
@@ -36,7 +37,7 @@ export default function Features() {
         <div className={styles.grid} role="list">
           {features.map((item, i) => (
             <div role="listitem" key={i}>
-              <Card title={item.title} description={item.description} image={item.image} />
+              <Card title={item.title} description={item.description} image={item.image}  loading="lazy"  />
             </div>
           ))}
         </div>
