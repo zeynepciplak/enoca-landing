@@ -1,6 +1,12 @@
 # 📘 CHANGELOG
 
-## [0.1.0] - 2025-11-07  
+## [0.5.0] - 2025-11-07
+### Added
+- Dark/Light tema geçişi için `ThemeSwitcher` bileşeni eklendi.
+- Tema değişkenleri (`_variables.scss`) güncellendi.
+- Responsive ve erişilebilir tema değiştirici tamamlandı.
+
+## [0.4.0] - 2025-11-07  
 ### Added  
 - Form doğrulama sistemi geliştirildi.  
   - Ad Soyad, E-posta ve Mesaj alanlarında boş alan kontrolü eklendi.  

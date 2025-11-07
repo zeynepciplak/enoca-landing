@@ -1,21 +1,26 @@
 :root {
-  /* Light tema */
+  /*  Light tema */
   --bg-color: #ffffff;
   --text-color: #111111;
   --primary-color: #0077ff;
   --secondary-color: #f5f5f5;
   --card-bg: #e1e1e6;
   --border-radius: 8px;
+  --border-color: #e0e0e0;
   --transition: 0.3s ease;
 }
 
 [data-theme='dark'] {
+  /*  Dark tema */
   --bg-color: #111111;
   --text-color: #ffffff;
   --primary-color: #3399ff;
   --secondary-color: #1f1f1f;
+  --card-bg: #1a1a1a;
+  --border-color: #333333;
 }
 
+/*  Global değişkenler */
 $font-primary: 'Inter', sans-serif;
 $container-width: 1200px;
 $spacing-unit: 1rem;
