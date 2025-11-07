@@ -1,5 +1,11 @@
 # 📘 CHANGELOG
 
+## [0.1.0] - 2025-11-07
+### Added
+- Aria-label ve role iyileştirmeleriyle erişilebilirlik artırıldı.
+- Başlık ve alt başlık font boyutları standardize edildi.
+- Lazy load optimizasyonu eklendi.
+
 ## [v1.0.7] - 2025-11-07
 ###  Performance
 - Tüm görseller `.webp` formatına dönüştürüldü.

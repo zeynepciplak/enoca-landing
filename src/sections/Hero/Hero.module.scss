@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
+@import '../../styles/typography';
 
 .hero {
   @include container;
@@ -19,27 +20,34 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
+/* 🎯 Yeni büyük boyutlar */
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: calc(var(--font-size-title) * 1.3); /* ~33px */
+  font-weight: 800;
   line-height: 1.2;
+  letter-spacing: -0.015em;
 
   span {
     color: var(--primary-color);
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: calc(var(--font-size-title) * 1.05);
   }
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: var(--font-size-subtitle);
+  line-height: 1.75;
   opacity: 0.9;
+  color: var(--text-color);
+
+  @media (max-width: 768px) {
+    font-size: calc(var(--font-size-subtitle) * 0.95);
+  }
 }
 
 .actions {
@@ -60,21 +68,20 @@
 
 .image {
   width: 100%;
-  max-width: 600px; 
+  max-width: 650px; /* biraz büyüdü */
   height: auto;
-  border-radius:var(--border-radius);
+  border-radius: var(--border-radius);
   object-fit: cover;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
-  opacity: 0.99; 
-  transition: transform var(--transition);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0.99;
+  transition: transform var(--transition), opacity var(--transition);
 
   &:hover {
-    transform: scale(1.02); /* hover’da hafif büyüsün */
-    opacity: 1; /* parlaklaşsın */
+    transform: scale(1.02);
+    opacity: 1;
   }
 
   @media (max-width: 768px) {
-    max-width: 90%;
-    border-radius: 12px;
+    max-width: 92%;
   }
 }
