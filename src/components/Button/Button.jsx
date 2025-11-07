@@ -14,7 +14,7 @@ export default function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      aria-label={ariaLabel || label} 
+      aria-label={ariaLabel || label}
     >
       {label}
     </button>

@@ -35,7 +35,8 @@ export default function Contact() {
         errorMessage.textContent = ' E-posta alanı boş bırakılamaz.';
         isValid = false;
       } else if (!emailRegex.test(email)) {
-        errorMessage.textContent = ' Geçerli bir e-posta adresi girin. (örnek@mail.com)';
+        errorMessage.textContent =
+          ' Geçerli bir e-posta adresi girin. (örnek@mail.com)';
         isValid = false;
       } else if (!message) {
         errorMessage.textContent = ' Mesaj alanı boş bırakılamaz.';
@@ -50,7 +51,7 @@ export default function Contact() {
 
       if (!validateForm()) return;
 
-      // Yalancı submit 
+      // Yalancı submit
       successMessage.textContent = ' Mesajınız başarıyla gönderildi! ';
       form.reset();
     };
@@ -63,9 +64,15 @@ export default function Contact() {
   }, []);
 
   return (
-    <section className={styles.contact} id="contact" aria-labelledby="contact-title">
+    <section
+      className={styles.contact}
+      id="contact"
+      aria-labelledby="contact-title"
+    >
       <div className={styles.container}>
-        <h2 id="contact-title" className={styles.title}>İletişim</h2>
+        <h2 id="contact-title" className={styles.title}>
+          İletişim
+        </h2>
         <p className={styles.subtitle}>
           Görüş, öneri veya sorularınız için formu doldurabilirsiniz.
         </p>
@@ -73,12 +80,22 @@ export default function Contact() {
         <form id="contact-form" className={styles.form} noValidate>
           <div className={styles.formGroup}>
             <label htmlFor="name">Ad Soyad</label>
-            <Input type="text" id="name" name="name" placeholder="Adınızı girin" />
+            <Input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Adınızı girin"
+            />
           </div>
 
           <div className={styles.formGroup}>
             <label htmlFor="email">E-posta</label>
-            <Input type="email" id="email" name="email" placeholder="ornek@mail.com" />
+            <Input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ornek@mail.com"
+            />
           </div>
 
           <div className={styles.formGroup}>
@@ -94,7 +111,11 @@ export default function Contact() {
           <Button type="submit" label="Gönder" variant="primary" />
 
           <p id="form-error" className={styles.error} aria-live="assertive"></p>
-          <p id="form-success" className={styles.success} aria-live="polite"></p>
+          <p
+            id="form-success"
+            className={styles.success}
+            aria-live="polite"
+          ></p>
         </form>
       </div>
     </section>

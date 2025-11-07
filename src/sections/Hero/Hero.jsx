@@ -14,11 +14,16 @@ export default function Hero() {
           Dijital Deneyimi <span>Birlikte</span> Geliştirelim
         </h1>
         <p className={styles.subtitle}>
-          Modern web teknolojileriyle oluşturulmuş sade, hızlı ve erişilebilir bir kullanıcı deneyimi.
+          Modern web teknolojileriyle oluşturulmuş sade, hızlı ve erişilebilir
+          bir kullanıcı deneyimi.
         </p>
         <div className={styles.actions}>
           <Button label="Hemen Başla" variant="primary" />
-          <Button label="Daha Fazla Bilgi" variant="secondary" onClick={scrollToFAQ} />
+          <Button
+            label="Daha Fazla Bilgi"
+            variant="secondary"
+            onClick={scrollToFAQ}
+          />
         </div>
       </div>
 
@@ -30,10 +35,8 @@ export default function Hero() {
           loading="lazy"
           width="600"
           height="400"
-           
         />
       </div>
     </section>
   );
 }
- 

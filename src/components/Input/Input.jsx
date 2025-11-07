@@ -37,7 +37,11 @@ export default function Input({
       />
 
       {error && (
-        <span id={`${inputId}-error`} className={styles.errorMessage} role="alert">
+        <span
+          id={`${inputId}-error`}
+          className={styles.errorMessage}
+          role="alert"
+        >
           {error}
         </span>
       )}

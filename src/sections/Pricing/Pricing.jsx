@@ -32,9 +32,12 @@ export default function Pricing() {
   return (
     <section className={styles.pricing} aria-labelledby="pricing-title">
       <div className={styles.container}>
-        <h2 id="pricing-title" className={styles.title}>Fiyat Kartları</h2>
+        <h2 id="pricing-title" className={styles.title}>
+          Fiyat Kartları
+        </h2>
         <p className={styles.subtitle}>
-          İhtiyacına uygun planı seç. Kartlar klavye ile gezinmeye ve ekranda okunabilirliğe uygundur.
+          İhtiyacına uygun planı seç. Kartlar klavye ile gezinmeye ve ekranda
+          okunabilirliğe uygundur.
         </p>
 
         <div className={styles.grid} role="list">
@@ -46,11 +49,18 @@ export default function Pricing() {
               aria-label={`${p.name} planı`}
               tabIndex={0} // klavye erişimi
             >
-              {p.popular && <span className={styles.badge} aria-label="Popüler plan">Popüler</span>}
+              {p.popular && (
+                <span className={styles.badge} aria-label="Popüler plan">
+                  Popüler
+                </span>
+              )}
 
               <header className={styles.header}>
                 <h3 className={styles.planName}>{p.name}</h3>
-                <div className={styles.price} aria-label={`Fiyat ${p.price} ${p.period}`}>
+                <div
+                  className={styles.price}
+                  aria-label={`Fiyat ${p.price} ${p.period}`}
+                >
                   <span className={styles.amount}>{p.price}</span>
                   <span className={styles.period}>{p.period}</span>
                 </div>
@@ -65,7 +75,10 @@ export default function Pricing() {
               </ul>
 
               <div className={styles.actions}>
-                <Button label={p.cta} variant={p.popular ? 'primary' : 'secondary'} />
+                <Button
+                  label={p.cta}
+                  variant={p.popular ? 'primary' : 'secondary'}
+                />
               </div>
             </article>
           ))}

@@ -5,8 +5,12 @@ export default function Card({ title, description, image, children }) {
     <div className={styles.card}>
       {image && (
         <div className={styles.imageWrapper}>
-          <img src={image} alt={title || 'card image'} className={styles.image}  loading="lazy"
-            />
+          <img
+            src={image}
+            alt={title || 'card image'}
+            className={styles.image}
+            loading="lazy"
+          />
         </div>
       )}
       <div className={styles.content}>
